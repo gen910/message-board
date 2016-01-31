@@ -12,22 +12,24 @@
   </div>
 </div>
 
-<div class = container>
+<div class = form-horizontal>
     <%= form_for(@message) do |f| %>
-  名前:
-  <br>
-    <%= f.text_field :name %>
-  <br>
-
-  内容:
-  <br>
-  <div rows = "3">
+  <div class="form-group">
+    <label class="col-sm-1 control-label" for="InputSelect"> 名前:</label>
+		  <div class="col-sm-11">
+      <%= f.text_field :name %>
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-1 control-label" for="InputSelect">内容:</label>
+		  <div class="col-sm-11">
       <%= f.text_area :body %> 
-  <br>
+      </div>
   </div>
-   
-  <div class="text-uppercase">    
+  <div class="form-group"> 
+    <div class="col-sm-offset-1 col-sm-11">
       <%= f.submit class: "btn btn-xs btn-primary " %>
+    </div>
   </div>
- </div>
+</div>
 <% end %>
