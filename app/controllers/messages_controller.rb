@@ -17,7 +17,7 @@ class MessagesController < ApplicationController
       render 'index'
     end
   end
-def edit
+  def edit
   end
   
   def update
@@ -40,4 +40,4 @@ def edit
   def set_message
     @message = Message.find(params[:id])
   end
-end
+ end
