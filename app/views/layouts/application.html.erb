@@ -14,8 +14,15 @@
         <a class="navbar-brand" href="#">Message Board</a>
       </div>
     </div>
-  </nav>
+    </nav>
+
   <div class="container">
+    <% if notice %>
+      <div class="alert alert-info">
+        <%= notice %>
+      </div>
+    <% end %>
+    
     <%= yield %>
   </div>
 </body>
